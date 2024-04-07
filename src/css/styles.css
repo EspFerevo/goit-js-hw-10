@@ -1,21 +1,104 @@
 @import url('./reset.css');
 /* Timer styles */
+
+#datetime-picker {
+  width: 220px;
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #007bff;
+  border-radius: 25px;
+  transition: border-color 0.3s;
+}
+
+#datetime-picker:focus {
+  outline: none;
+  border-color: #ff6c00;
+}
+
+#start-btn {
+  width: 60px;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#start-btn[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .timer {
   display: flex;
-  flex-wrap: wrap;
   margin-top: 20px;
+  color: #6b8e23;
 }
+
 .field {
   margin: 0 10px;
   text-align: center;
-}
-.value {
   font-size: 24px;
   font-weight: bold;
 }
+
+.value {
+  display: block;
+}
 .label {
   font-size: 14px;
-  color: #888;
+  color: black;
+}
+/* 
+/* Snackbar Styles */
+
+.form {
+  width: 350px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Snackbar styles */
+.form legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form input[type='text'],
+.form input[type='number'] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.form label {
+  margin-bottom: 10px;
+  margin-right: 70px;
+}
+
+.form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #008080;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #483d8b;
+}
