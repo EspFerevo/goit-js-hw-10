@@ -13,7 +13,7 @@ const options = {
   onClose(selectedDates) {
     const selectedDate = selectedDates[0];
     const currentDate = new Date();
-    const startButton = document.getElementById('start-button');
+    const startButton = document.getElementById('start-btn');
 
     if (selectedDate <= currentDate) {
       iziToast.error({
@@ -48,7 +48,7 @@ function updateTimer(endTime) {
         message: 'Countdown finished!',
       });
       document.getElementById('datetime-picker').disabled = false;
-      document.getElementById('start-button').disabled = true;
+      document.getElementById('start-btn').disabled = true;
       return;
     }
 
@@ -60,7 +60,7 @@ function updateTimer(endTime) {
   }, 1000);
 }
 
-document.getElementById('start-button').addEventListener('click', () => {
+document.getElementById('start-btn').addEventListener('click', () => {
   const selectedDate = flatpickr.parseDate(
     document.getElementById('datetime-picker').value,
     'Y-m-d H:i'
@@ -69,7 +69,7 @@ document.getElementById('start-button').addEventListener('click', () => {
   const endTime = selectedDate;
 
   document.getElementById('datetime-picker').disabled = true;
-  document.getElementById('start-button').disabled = true;
+  document.getElementById('start-btn').disabled = true;
 
   updateTimer(endTime);
 });
